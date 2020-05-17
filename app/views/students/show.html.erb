@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>First Name</td>
+        <td><%= @student.fname %></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><%= @student.lname %></td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td><%= @student.contact %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= @student.email %></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <% if @student.is_female%>
+            Female
+          <% else %>
+            Male
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><%= @student.address %></td>
+      </tr>
+    </table>
+    <%= link_to 'Home', root_path%>
+  </body>
+</html>
